@@ -43,7 +43,7 @@ variable "private_subnet_cidrs" {
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t3.micro"
+  default     = "t2.micro"
 }
 
 variable "db_instance_type" {
@@ -62,4 +62,9 @@ variable "db_password" {
   description = "Database master password"
   type        = string
   sensitive   = true
+}
+
+variable "allowed_ssh_cidr" {
+  description = "Allowed SSH CIDR block"
+  type        = string
 }
